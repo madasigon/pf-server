@@ -1,0 +1,11 @@
+class S3(object):
+    access = dict(
+            region_name=None,
+            endpoint_url=None,
+            aws_access_key_id=None,
+            aws_secret_access_key=Nonde
+        )
+
+    bucket = 'pfinder'
+
+SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
