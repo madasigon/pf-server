@@ -10,10 +10,10 @@ def ct(name):
     return dict(
         html = "text/html"
     ).get(name.split(".")[-1], "binary/octet-strean")
-session = boto3.session.Session()
-client = session.client('s3',**S3.access)
 
-def new_file(name, content, public=True):    
+def new_file(name, content, public=True):
+    session = boto3.session.Session()
+    client = session.client('s3',**S3.access)
     client.upload_fileobj(
         B(content.encode('utf-8')),
         S3.bucket,
