@@ -1,16 +1,14 @@
 import os
 
 from flask import Flask, render_template
+from .model import register
+from flask_sqlalchemy import SQLAlchemy
 
-
+db = None
 def create_app(test_config=None):
+    global db
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    app.config.from_mapping(
-        SECRET_KEY='dev',
-        DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
-        DEBUG = True
-    )
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
@@ -24,5 +22,9 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
+
+    db = SQLAlchemy(app)
+
+    register(db)
     
     return app
