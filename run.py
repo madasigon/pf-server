@@ -1,4 +1,5 @@
 from app import app
+from WebApp import db
 
 
 try:
@@ -7,4 +8,6 @@ try:
 except ImportError:
     pass
 
+db.drop_all()
+db.create_all()
 app.run(debug=True)
