@@ -1,13 +1,10 @@
 
+
 def register(db):
-    global User
+    global Challenge
+    class Challenge(db.Model):
+        id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+        url = db.Column(db.String(80), unique=True, nullable=False)
+        solution_hash = db.Column(db.String(80), unique=True, nullable=False)
+        local_name = db.Column(db.String(80), unique=True, nullable=False)
 
-    class User(db.Model):
-        id = db.Column(db.Integer, primary_key=True)
-        username = db.Column(db.String(80), unique=False, nullable=False)
-        email = db.Column(db.String(120), unique=False, nullable=False)
-
-        def __repr__(self):
-            return '<User %r>' % self.username
-
-            
