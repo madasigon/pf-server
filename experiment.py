@@ -4,22 +4,6 @@ import WebApp.model as models
 from WebApp.space import chpath
 def app_modify(app):
     
-    @app.route("/pic")
-    def pic():
-        return redirect("https://pfinder.nyc3.digitaloceanspaces.com/doge.jpg")
-    
-    @app.route("/")
-    def index():
-        return render_template("index.jinja2")
-    
-    
-    @app.route("/error")
-    def err():
-        db.session.add(User(username="g",email="hali"))
-        db.session.commit()
-        return escape(User.query.all())
-
-    @app.route("/challenge/<string:hash>")
-    def get_ch(hash):
-        challenge = models.Challenge.query.filter_by(url=hash).one()
-        return send_from_directory(chpath, challenge.local_name)
+    @app.route("/chs")
+    def get_all():
+        return escape(str([ch.url for ch in models.Challenge.query.all()]))
