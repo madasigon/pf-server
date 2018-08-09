@@ -9,3 +9,4 @@ class S3(object):
     bucket = 'pfinder'
 
 SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
+START_URL = "start"
