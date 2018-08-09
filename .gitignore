@@ -16,3 +16,7 @@ build/
 *.egg-info/
 
 *.db
+
+**/challenges/**
+
+storage/
