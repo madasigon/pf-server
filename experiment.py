@@ -1,6 +1,7 @@
-from flask import redirect, Markup, escape
+from flask import redirect, Markup, escape, send_from_directory
 from WebApp import db
-from WebApp.model import User
+import WebApp.model as models
+from WebApp.space import chpath
 def app_modify(app):
     
     @app.route("/pic")
@@ -20,3 +21,8 @@ def app_modify(app):
         db.session.add(User(username="g",email="hali"))
         db.session.commit()
         return escape(User.query.all())
+
+    @app.route("/challenge/<string:hash>")
+    def get_ch(hash):
+        challenge = models.Challenge.query.filter_by(url=hash).one()
+        return send_from_directory(chpath, challenge.local_name)
