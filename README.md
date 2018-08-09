@@ -8,6 +8,8 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
+Create instance/config.py file
+
 run the debug server:
 
 python run.py
