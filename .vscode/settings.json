@@ -1,0 +1,18 @@
+{
+    "python.pythonPath": "/home/gergo/Desktop/pf-server/venv/bin/python",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.vscode": true,
+        "**/__pycache__": true,
+        "**/venv": true,
+        "**/requirements.txt": true,
+        "**.pyc": true,
+        "**.db": true,
+        "**/**.db": true,
+        "storage/": true
+    }
+}
