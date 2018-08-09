@@ -1,4 +1,4 @@
-from flask import redirect, Markup, escape, send_from_directory
+from flask import redirect, Markup, escape, send_from_directory, render_template
 from WebApp import db
 import WebApp.model as models
 from WebApp.space import chpath
@@ -10,11 +10,8 @@ def app_modify(app):
     
     @app.route("/")
     def index():
-        return '<img src="/pac"></img>'
+        return render_template("index.jinja2")
     
-    @app.route("/pac")
-    def pac():
-        return redirect("/pic")
     
     @app.route("/error")
     def err():
