@@ -1,6 +1,6 @@
 from app import app
 from WebApp import db
-
+from WebApp.prepare import prepare
 
 try:
     from experiment import app_modify
@@ -8,6 +8,5 @@ try:
 except ImportError:
     pass
 
-db.drop_all()
-db.create_all()
+prepare(app)
 app.run(debug=True)
