@@ -1,5 +1,5 @@
 import os
-from shutil import copyfile
+from shutil import copyfile, rmtree
 from instance.config import STORAGE_PATH
 from random import randint
 
@@ -20,7 +20,7 @@ def clear_dir(dirPath):
     pass
 
 def initialize_storage():
-    clear_dir(relative("."))
+    rmtree(STORAGE_PATH)
     os.makedirs(relative(STDIR))
     os.makedirs(relative(CHDIR))
     

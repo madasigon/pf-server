@@ -37,7 +37,7 @@ def create_challenges():
 
 def prepare(app):
     clear_database()
-    #initialize_storage()
+    initialize_storage()
     create_challenges()
 
     
