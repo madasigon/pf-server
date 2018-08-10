@@ -13,7 +13,7 @@ def relative_(l):
         return os.path.join(l, r)
     return right_
 
-relative = relative_(STORAGE_PATH)
+relative = relative_(os.path.abspath(STORAGE_PATH))
 
 def clear_dir(dirPath):
     fileList = os.listdir(dirPath)
