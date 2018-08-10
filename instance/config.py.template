@@ -10,4 +10,4 @@ class S3(object):
 
 SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
 START_URL = "start"
-STORAGE_PATH = "/home/gergo/pf-server/storage"
+STORAGE_PATH = "storage"
