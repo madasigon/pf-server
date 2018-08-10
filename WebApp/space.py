@@ -47,10 +47,11 @@ class Storage(object):
         self.url_path = url_path
         self.ext = ext
     
-    def create_file(self, creator):
+    def create_file(self, creator, ext=None):
         new_name = random_name()
-        if self.ext:
-            new_name = "{}.{}".format(new_name, self.ext)
+        need = ext or self.ext
+        if need:
+            new_name = "{}.{}".format(new_name, need)
         creator(os.path.join(self.path, new_name))
         return relative_(self.url_path)(new_name)
     def send_from(self, name):
