@@ -29,12 +29,12 @@ def make_maze(w, h):
                 maze[i][j][1]=True
             if(hor[i+1][j]=="+----"):
                 maze[i][j][2]=True
-            if(hor[i][j+1]=="|    "):
+            if(ver[i][j+1]=="|    "):
                 maze[i][j][3]=True  
     s = ""
     for (a, b) in zip(hor, ver):
         s += ''.join(a + ['\n'] + b + ['\n'])
-    print(s)
+    #print(s)
     return maze
 if __name__ == '__main__':
     print(make_maze(16,5))
