@@ -1,0 +1,524 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Maze</title>
+</head>
+<body>
+	<h1>Escape from the maze!</h1>
+	<table border="1">
+	
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: : hidden ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: : hidden ; border-right: "><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left:  ; border-bottom: :  ; border-right: hidden"><p> Empty <p> </td>
+    	
+		<td style="border-top: hidden ; border-left: hidden ; border-bottom: :  ; border-right: "><p> Empty <p> </td>
+    	
+    </tr>
+    
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Maze</title>
+</head>
+<body>
+	<h1>Escape from the maze!</h1>
+	<table style="border:hidden">
+	
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top:  ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom :  ; border-right: solid"><p> Empty <p> </td>
+    	
+    </tr>
+    
+	
+	<tr style="border: hidden">
+		
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top: solid ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left: solid ; border-bottom : solid ; border-right: "><p> Empty <p> </td>
+    	
+		<td style="border-top:  ; border-left:  ; border-bottom : solid ; border-right: solid"><p> Empty <p> </td>
+    	
+    </tr>
+    
+</body>
+</html>
