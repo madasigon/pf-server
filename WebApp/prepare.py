@@ -2,15 +2,15 @@ from hashlib import sha1
 
 import WebApp.model as models
 from WebApp import db
-from WebApp.space import upload_challenge, initialize_storage, write_content
+from WebApp.space import challenge_storage, initialize_storage, write_content
 from instance.config import START_URL
 
 from Challenges import generate_challenges
 
 
 def hash_function(s):
-    return s
-    #return sha1(s.encode("utf-8")).hexdigest()
+    #return s
+    return sha1(s.encode("utf-8")).hexdigest()
 
 def clear_database():
     db.drop_all()
@@ -26,7 +26,7 @@ def create_challenges():
         model_chs.append(models.Challenge(
             solution_hash=current_hash,
             url=prev_hash,
-            local_name=upload_challenge(write_content(challenge.get_html()))
+            local_name=challenge_storage.create_file(write_content(challenge.get_html())).split("/")[-1]
         )),
         prev_hash = current_hash
     

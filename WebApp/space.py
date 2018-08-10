@@ -3,6 +3,8 @@ from shutil import copyfile, rmtree
 from instance.config import STORAGE_PATH
 from random import randint
 
+from flask import send_from_directory
+
 CHDIR = "challenges/"
 STDIR = "static/"
 
@@ -39,21 +41,24 @@ def random_name():
     return "".join([str(randint(0,9)) for i in range(15)])
 
 
-def directory_filler(dir, ext=None):
-    def create_file(creator):
+class Storage(object):
+    def __init__(self, path, url_path, ext=None):
+        self.path = path
+        self.url_path = url_path
+        self.ext = ext
+    
+    def create_file(self, creator):
         new_name = random_name()
-        if ext:
-            new_name = "{}.{}".format(new_name, ext)
-        creator(os.path.join(dir, new_name))
-        return new_name
-    return create_file
+        if self.ext:
+            new_name = "{}.{}".format(new_name, self.ext)
+        creator(os.path.join(self.path, new_name))
+        return relative_(self.url_path)(new_name)
+    def send_from(self, name):
+        return send_from_directory(self.path, name)
+    
 
-upload_challenge = directory_filler(relative(CHDIR),ext="html")
-upload_static = directory_filler(relative(STDIR))
-chpath = relative(CHDIR)
-chrelative = relative_(chpath)
-strelative = relative_(relative(STDIR))
-
+challenge_storage = Storage(relative(CHDIR), "/challenge", ext="html")
+static_storage = Storage(relative(STDIR), "/challenge/static")
 
 
 
