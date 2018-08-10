@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Maze</title>
+</head>
+<body>
+	<h1>Escape from the maze!</h1>
+	<table style="border:hidden">
+	{% for row in maze %}
+	<tr style="border: hidden">
+		{% for column in row %}
+		<td style="border-top: {{ 'solid' if (column[0]==True) }} ; border-left: {{ 'solid' if (column[1]==True) }} ; border-bottom : {{ 'solid' if column[2]==True }} ; border-right: {{ 'solid' if column[3]==True }}"><p> Empty <p> </td>
+    	{% endfor %}
+    </tr>
+    {% endfor %}
+</body>
+</html>
