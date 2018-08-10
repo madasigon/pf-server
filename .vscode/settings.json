@@ -13,6 +13,7 @@
         "**.pyc": true,
         "**.db": true,
         "**/**.db": true,
-        "storage/": true
+        "storage/": true,
+        "app.py": true
     }
 }
