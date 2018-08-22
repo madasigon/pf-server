@@ -12,5 +12,7 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
 START_URL = "start"
 STORAGE_PATH = "storage"
 
-
 SERVER_NAME = "localhost:5000"
+
+def hash_function(s):
+    return s

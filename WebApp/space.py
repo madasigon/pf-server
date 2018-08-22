@@ -4,9 +4,9 @@ from random import randint
 
 from flask import send_from_directory, Blueprint, url_for
 import WebApp.model as models
+from instance.config import hash_function
 
-def hash_function(s):
-    return s
+
 
 def copy_from(src):
     def to(dst):
