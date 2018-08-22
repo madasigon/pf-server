@@ -2,7 +2,7 @@ import os
 from shutil import copyfile, rmtree
 from random import randint
 
-from flask import send_from_directory, Blueprint, url_for
+from flask import send_from_directory, Blueprint, url_for, render_template
 import WebApp.model as models
 from instance.config import hash_function
 
@@ -46,7 +46,7 @@ class StaticStorage(object):
         res = "".join([str(randint(0,9)) for i in range(15)])
         if ext is not None:
             res += "." + ext
-        return ext
+        return res
 class AssetStorage(StaticStorage):
 
     def access(self, filename):
@@ -63,17 +63,24 @@ class ChallengeStorage(StaticStorage):
 
     def access(self, filename):
         filename = filename.lower()
-        return self.send_at(filename, mimetype="html")
+        challenge = models.Challenge.query.filter_by(url=filename).one()
+        with open(os.path.join(self.path, filename)) as f:
+            ch_content = f.read()
+        #error
+        return render_template("challenge_wrapper.jinja2", ch_content=ch_content, challenge=challenge)
+        #return self.send_at(filename, mimetype="html")
     
     def save_challenges(self, challenges):
         prev_hash = self.app.config["START_URL"]
         db = self.app.db
         print (len(challenges))
         for challenge in challenges:
-            current_hash = hash_function(challenge.get_solution())
+            current_solution = challenge.get_solution()
+            current_hash = hash_function(current_solution)
             challenge_row = models.Challenge(
                 solution_hash=current_hash,
-                url=prev_hash
+                url=prev_hash,
+                solution = current_solution
             )
             print ("saving at", challenge_row.url)
             self.save_at(challenge_row.url, write_content(challenge.get_html()))

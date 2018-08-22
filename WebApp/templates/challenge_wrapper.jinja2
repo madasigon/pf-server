@@ -1,0 +1,8 @@
+{{ ch_content|safe }}
+<h1>==============================================
+</h1>
+
+The solution to this chagfdgdfgllange is "{{ challenge.solution|string }}" <br>
+{{ error }}
+so the url of the next challange is hash("{{challenge.solution}}")
+which is at <a href="{{ url_for("challenge.access", filename=challenge.solution_hash) }}">{{ url_for("challenge.access", filename=challenge.solution_hash) }}</a>
