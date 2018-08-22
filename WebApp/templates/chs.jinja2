@@ -1,6 +1,7 @@
 Urls: <br>
-<pre> {{ urls }}</pre>
-
+{% for url in urls %}
+    <a href="{{ url }}">{{ url }} </a><br>
+{% endfor %}
 Hash function: <br>
 
 <pre> {{ hf }} </pre>

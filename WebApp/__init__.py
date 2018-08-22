@@ -5,7 +5,8 @@ from .model import register as register_models
 from flask_sqlalchemy import SQLAlchemy
 from .views import register as register_views
 
-db = None
+from .space import AssetStorage, ChallengeStorage
+
 def create_app(test_config=None):
     global db
     app = Flask(__name__, instance_relative_config=True)
@@ -21,8 +22,11 @@ def create_app(test_config=None):
         pass
 
     db = SQLAlchemy(app)
-
     register_models(db)
     register_views(app)
+    app.db = db
+
+    app.challenge_storage = ChallengeStorage(app, "challenge")
+    app.asset_storage = AssetStorage(app, "asset")
     
     return app

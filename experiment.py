@@ -6,7 +6,7 @@ from WebApp.prepare import hash_function
 def app_modify(app):
     @app.route("/chs")
     def get_all():
-        return render_template("chs.jinja2", hf=getsource(hash_function), urls=str([url_for("challenge.challenge",hash=ch.url) for ch in models.Challenge.query.all()]))
+        return render_template("chs.jinja2", hf=getsource(hash_function), urls=[url_for("challenge.access",filename=ch.url) for ch in models.Challenge.query.all()])
     @app.route("/error")
     def error():
         errorfdsf

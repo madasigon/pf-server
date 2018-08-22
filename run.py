@@ -1,7 +1,8 @@
-from app import app
-from WebApp import db
+from WebApp import create_app
 from WebApp.prepare import prepare
 
+
+app = create_app()
 try:
     from experiment import app_modify
     app_modify(app)
